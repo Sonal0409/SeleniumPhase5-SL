@@ -1,0 +1,440 @@
+
+
+What is testing?
+
+ verify the code written is as per the requirements of the user
+
+ find bugs in the code written so that application deleveloped as per the given requirement
+
+ to check actual results match to expected req
+
+why testing?
+
+ > find bugs in the written code
+
+ > improve the quality of the code
+
+ > find defect early, its easy to fix and less cost
+
+
+Types of testing:
+
+
+ Manual testing: testing your application manually step by step by a tester
+
+  > time consuming
+  > repetition - boring
+  > chance of error
+  > missed testing the req
+  > quality will be less
+  > cost will be more
+
+Automation Testing: execute the test cases but using an automation tool
+
+  > fatser
+
+  > repetitive task can be performed easily with automation tool
+
+  > less mistakes and quality of testing will be better
+
+  > cost will less
+
+  > schedule the testing on desired time
+
+
+ Automation tool : selenium
+
+
+Features:
+
+ functional testing and regression
+ selenium tool is a java based
+ Open source tool, free
+ WEb app testing, mobile platform testing
+ Selenium support testing on multiple browser: chrome, IE, edge, FF, safari
+ Test Scripts for testing
+ Selenium support multiple programming language: JAVA, python, ruby, C#, php
+ Platform independent tool : windows, mac & linux
+
+Componenets of Selenium : set of tools
+***************
+
+Selenium IDE :
+*******************
+Used for testing webapplication
+it is a plugin or extension to be added on chrome browser or FF browser
+its has a dashboard, you record your test cases of an application, and then play it back
+Simple and easy to work with tool of selenium
+record and playback tool
+No complex testing can be done with IDE
+No programming skills needed to use this tool
+
+Disadvantages:
+*******************
+ you cannot run your test cases with huge test data
+ you cannot pass test data from csv file or excel sheet to IDE
+ you cannot do cross browser testing
+ manually update the chnages and record the scenario
+ no wait time can be added in IDE
+
+Selenium WebDriver: JAVA
+*********************
+
+> heart of selenium, main component of selenium
+> automation testing
+> using selenium webdriver, we write scripts in different programmign language to automate the test cases or functionalities
+> webdriver is just a set of libraries (Interface, classes, methods) files that help you to automate
+> Complex testing can be performed
+> webdriver when intgrated with testing framework tools like testng, junit, cusumber, extent reports and so on..
+> plan the execution of test cases: prioritze test cases, group your test cases
+> selenium can be integrated with DEVOPS tools: git hub, Maven , jenkins , docker : continous testing
+> pass test data from csv file or excel sheet to your test scripts
+> Synchronize the tool to wait for certain time with your application: 2 types of wait time: implicit wait & explicit wait
+> screenshots of test cases failure
+> parallel testing, cross browser testing at the same time
+
+Installation:  JAVA version <= 1.8 , eclipse latest, selenium webdriver library
+
+
+
+Selenium GRID
+
+execute the selenium test cases in a distributed format
+
+using GRID we set up a hub and multiple node environment
+
+using webdriver ---> supply tets script --> GRID HUB---> distribute your script to a node for execution
+
+> parallel testing, cross browser testing at the same time
+
+
+Selenium RC
+
+remote control : deprecated
+
+
+
+
+ Agenda: Day 2
+************
+
+ Install and set up selenium client
+ download selenium driver
+ Write test scripts --> automate browser, nagation to different webpages
+ Locator selenium
+ Web elements testing
+
+
+
+ 
+
+
+ Install and set up selenium client :
+
+ pls check java is availabel on your machine - available
+
+ Install eclipse --> available 
+Eclipse IDE for Java Developers (includes Incubating components)
+
+
+Install selenium client :
+
+  Manually : 
+you selenium website and download the java client libraries in your local machine
+https://www.selenium.dev/downloads/
+Create a java project in eclipse
+Go to configure build step
+add the libraries/jar to your java project
+
+OR
+
+Using maven dependencies
+
+ go to eclipse--> create a simple Maven project
+
+ Go to FILE---> project---> MAVEN---> MAVEN project---> select Create simple project---> select the workspace
+
+ you will go to the pom file and add selenium-java dependencies, TestNG
+
+ <dependencies>
+  
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-java</artifactId>
+<version>3.141.59</version>
+</dependency>
+   <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+            <scope>test</scope>
+        </dependency>
+        </dependencies>
+
+ save the pom file
+
+************************************
+Install the chrome driver
+
+***********************
+
+browser is Chrome
+
+check the version of chrome browser
+
+go to browser-- help--about google chrome
+
+and note the installed version : Version 100
+
+Whatever is your browser version --- same should be the version of selenium chrome driver installed
+
+Go to https://www.selenium.dev/downloads/
+
+scroll down down to browser section ---> go to chrome --> click on documentation
+
+***************************
+
+
+- WebElements
+
+WebPage consist of multiple webelements
+
+> inputbox, textbox
+ action :  enabled or not , enter data
+> buttons, submit
+
+action : button is enabled or not, click
+
+> checkbox, radiobutton
+action : checkbox is enabled or not, click/select
+
+> dropdown, dynamic drop down
+
+action : list the values, select the value from the list
+> tables
+
+action : how many rows, how many columes, fetch value from the cell
+> Images
+
+action : click
+> Links
+
+action : link is enabled or not, click
+
+> data pciker
+
+select a date
+
+
+We will use selenium to test these webelements
+for this, 
+
+selenium goes to the webpage and find the desired element on the webpage and perform an action on it
+
+Locators:
+
+locators are nothing but address of elements
+
+Every element on the webpage has some attributes associated to it, using these attributes you can find the address of the elements
+
+Testing an element using selenium
+
+
+Step1 : find the attributes of an element
+
+
+Step2: find the locator
+
+Locators in selenium are :
+
+every locator will get a value from element attribute
+
+id    : id attribute
+
+name : name attribute
+
+tagName : tag of the element
+
+className: class attribute
+
+xPath
+
+CSS
+
+linktext : inner text of element
+
+partialLinktext
+
+
+<input name="search" type="search" size="20" autofocus="autofocus" accesskey="F" dir="auto" autocomplete="off" style="padding-right: 64px;">
+
+
+find the element using ID locator and its value is going to be searchInput
+
+find the element using name locator and its value is going to be search
+
+
+
+
+
+
+
+
+
+
+
+Step 3: perform the action on the element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
