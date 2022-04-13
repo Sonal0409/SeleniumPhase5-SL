@@ -119,7 +119,7 @@ remote control : deprecated
 ************
 
  Install and set up selenium client
- download selenium driver
+ download selenium driver - chrome driver
  Write test scripts --> automate browser, nagation to different webpages
  Locator selenium
  Web elements testing
@@ -244,7 +244,7 @@ Testing an element using selenium
 Step1 : find the attributes of an element
 
 
-Step2: find the locator
+Step2: find the locator value
 
 Locators in selenium are :
 
@@ -275,16 +275,313 @@ find the element using ID locator and its value is going to be searchInput
 find the element using name locator and its value is going to be search
 
 
-
-
-
-
-
-
-
-
-
 Step 3: perform the action on the element
+
+sendkeys()
+Click()
+
+*************************
+
+Day 3: Agenda:
+
+ > learn about XPATH locator and its axex
+ > Using XPATH, we will test checkboxes, radio buttons, tables & drop down
+ > how to handle dynamic elements on webpage
+ > learn about CSS selector locator
+ > Wait time in selenium
+
+
+ 1. learn about XPATH locator and its axex
+************
+It is one of the most commonly used locator in selenium
+
+XPATH stands for xml expression path
+
+XPATH is an expression that you will use to find an element on the webpage
+
+XPATH is a syntax, which one will write to find an element or elements on a webpage
+
+
+HTML document nodes:
+
+Root NOde	XpathNode that contains entire document is called as root node
+Element Node	Represt a WebElement. Defined between <> </>
+Attribute	Defines the feature of a particular element node
+Text Node	ANy node which containes text for an element it is called as text node
+Comment	        Contains some text to provide additional info
+Processing Instruction	"<? xmlversion =""1.0"" encoding=""UTF-8""?>details about xml version and encoding"
+
+
+XPATH : 2 types
+
+Absolute xpath: reach the desired element using the tags of the html document
+
+Complete path of travelling between your html document from the very first tag to the tag of the desired element(element that we want to locate).
+
+ /html/body/div[3]/div/div/a
+
+/html/body/div[3]/form/fieldset/input
+/html/body/div[3]/form/fieldset/button
+
+
+Relative xpath
+***************
+
+  Syntax : //tagname[@attribute='value']
+
+
+
+  //input[@id='searchInput']
+
+ //button[@type='submit']
+
+ //*[@type='submit']
+
+
+After writing relative xpath if you get one of many as the output on finder then use index value to select your specific node
+
+ (//tagname[@attribute='value'])[index]
+
+
+XPATH functions:
+
+text() : this function is used find text nodes on the webpage
+
+syntax:
+
+ //tagname[text()='full text value']
+
+ //span[text()='Main page']
+
+If there are 2 elements with the same text value, you can write the text() function XPATH and then use index
+
+  (//*[text()='About Wikipedia'])[2]
+
+
+
+ //*[text()='S&P BSE MidCap']
+
+
+
+2. starts-with()
+
+  //tagname[starts-with(@attributeName,starting characters)]
+
+starts-with() is a function that can find an element based on the starting value of the attribute
+
+
+when we compare relative xpath:
+
+//tagname[@attribute='value']
+
+3. Contains()
+
+ //tagname[contains(@attributeName,sub string value)]
+
+Find the tags with attribute value containing the provided sub string value in xpath
+
+
+
+XPATH Axis:
+
+
+
+ > child
+
+ synatx : //tagname[@attribute='value']/axixname::tagname
+
+find all the children for a parent tag
+
+  parentTag relativeXPATh/child::*
+
+find all the children with tag name as div for a parent tag
+
+parentTag relativeXPATh/child::div
+
+Example: 
+
+(//*[@class='Example'])[1]/child::*
+
+ > descendant
+
+  synatx : //tagname[@attribute='value']/axixname::tagname
+
+find all the tags(child, grandchild) for a parent tag
+
+  parentTag relativeXPATh/descendant::*
+
+   parentTag relativeXPATh/child::specifictagname[index]
+ 
+self	return the same current tag
+child	will return all the children of the current node
+parent	Will retrun the parent tag of the current node
+ancestor	selects all the ancestors of the context node
+ancestor-or-self	selects all the ancestors of the context node and itself
+descendant	will return all the children and grandchildren of the current node
+descendant-or-self	will return all the children of the current node and itself
+following	will return all the nodes that apppear after the current node ends
+following-sibling	"will return all the nodes that have :
+1. same parent as the current node
+2. appear after the conext node"
+preceding	will return all the nodes that appear before parent  of the context node and travelling through the root node
+preceding sibling	"will return all the nodes that have :
+1. same parent as the current node
+2. appear before the conext node"
+
+
+
+
+*************************************
+
+CSS selector Locator using tag & id attribute
+
+Synatx: tagname#value of id attribute
+
+input#searchInput
+
+
+CSS selector Locator using tag & class attribute
+
+Synatx: tagname.value of class attribute
+
+div.search-input
+
+
+
+CSS selector Locator using tag and any other attribute
+
+
+tagname[attributeName=value]
+
+
+
+CSS selector Locator using tag and inner text (link)
+
+
+tag:contains("innertext")
+
+
+#pt-login > a > span
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
