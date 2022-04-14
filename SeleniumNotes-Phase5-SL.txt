@@ -464,6 +464,130 @@ tag:contains("innertext")
 #pt-login > a > span
 
 
+************************************
+
+Day 4- Selenium Scripts:
+
+*******************************
+
+Agenda:
+
+ 
+ > Wait time in selenium
+  > pageLoad wait time
+  > Implicit wait
+  > Explicit wait
+
+ > Actions class and action methods
+ > scrolling on a webpage
+ > Alert Box
+ > Window handles
+ > Set up testNG, TestNG annotation
+
+
+
+
+*************************************
+
+Selenium with TestNG
+
+TestNG : testing new generation
+
+It is a testing framwork which make test process of automations cripts very easy and defined
+
+Selenium when integrated with testing framworks like junit, testng will provide fetaure like:
+
+parallel execution
+
+exclusing or incluse few test case execution
+
+execution of all scripts at same time
+
+TestNG generates test reports
+
+TESTNG. devops tools- for continous testing
+
+
+Download TestNG:
+
+1. download testNG dependency
+
+2. on the IDE, we have to download testNG plugin also
+
+only after which you can start working with TestNG
+
+
+ To work with TESTNG, you need to know, TESTNG annotations:
+
+ @Test
+
+ create  test method and then execute it using @Test annotaiton
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
