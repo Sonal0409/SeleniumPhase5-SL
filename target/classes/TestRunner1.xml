@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Seleniumtesting" verbose="1" >
+  <test name="Test1" >
+    <classes>
+       <class name="testNGScripts.LinktextLocatorDemo" />
+    </classes>
+  </test>
+    <test name="Test2" >
+    <classes>
+       <class name="testNGScripts.TestAnnotation1" />
+    </classes>
+  </test>
+</suite>
