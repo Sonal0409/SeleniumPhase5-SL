@@ -509,7 +509,7 @@ TESTNG. devops tools- for continous testing
 
 
 Download TestNG:
-
+****************
 1. download testNG dependency
 
 2. on the IDE, we have to download testNG plugin also
@@ -522,6 +522,199 @@ only after which you can start working with TestNG
  @Test
 
  create  test method and then execute it using @Test annotaiton
+
+
+@beforeMehtod & @afterMethod
+
+
+
+@beforeClass and @afterClass
+
+waiting for all to finish.. pls check the testng report generated
+
+Groups
+
+@Parameters
+
+cross borwser testing
+
+parallel testing
+
+*******************************************
+
+
+Selenium GRID
+
+********
+
+1 machine --> sleenium webdriver
+1 machine -> HUB
+
+multiple machines-->  nodes
+
+Current machine --> HUB
+
+Current machine partition --> node
+
+
+Set of selenium stanalone app
+
+
+Download selenium standalone using the following github location
+https://github.com/Sonal0409/SeleniumPhase5-SL/blob/master/selenium-server-standalone-3.141.59.jar
+
+Create folder on C driver with name as GRID
+
+ > in this folder copy your selenium standalone jar file
+ 
+ > also copy the chromedriver and geckodriver exe file
+
+
+
+Setup Hub:
+
+there is a command you need to run to make its a Hub
+
+Go to cmd prompt
+
+cd C:\Grid
+
+Execute this to connect to hub
+
+java -jar selenium-server-standalone-3.141.59.jar -role hub -port 4545
+
+
+Setup Node:
+***************
+Registration address for node given by HUB:
+
+http://192.168.1.7:4545/grid/register/
+
+open a new cmd prompt
+
+cd c:/Grid
+
+java -Dwebdriver.chrome.driver="C:\Grid\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.1.7:4545/grid/register/ -port 5757
+
+
+Setup is complete
+
+**************
+
+ DesiredCapabilties
+ 
+  setPlatform("windows")
+  setbrowserName("chrome")
+
+ChromeOptions
+
+to create a driver session
+
+RemoteWebDriver - class to create driver session with remote Node
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
