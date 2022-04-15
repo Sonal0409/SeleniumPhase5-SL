@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Seleniumtesting" class="navigator-link ">
-                    <span>C:\Users\sonal\eclipse-workspace\Phase5-Selenium-Apr\src\main\resources\CrossBrowser.xml</span>
+                    <span>C:\Users\sonal\eclipse-workspace\Phase5-Selenium-Apr\src\main\resources\ParameterDemo.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,22 @@
                     <div class="method-list-content passed suite-Seleniumtesting">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Seleniumtesting" title="testNGScripts.CrossBrowserTest" class="method navigator-link" hash-for-method="method2(Selenium Automation)">method2(Selenium Automation)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Seleniumtesting" title="testNGScripts.ParameterDemo" class="method navigator-link" hash-for-method="login(employee, emp@123)">login(employee, emp@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Seleniumtesting" title="testNGScripts.CrossBrowserTest" class="method navigator-link" hash-for-method="method2(Jmeter Automation)">method2(Jmeter Automation)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Seleniumtesting" title="testNGScripts.ParameterDemo" class="method navigator-link" hash-for-method="login(admin, admin@123)">login(admin, admin@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Seleniumtesting" title="testNGScripts.ParameterDemo" class="method navigator-link" hash-for-method="method2(Jmeter Automation)">method2(Jmeter Automation)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Seleniumtesting" title="testNGScripts.ParameterDemo" class="method navigator-link" hash-for-method="method2(Selenium Automation)">method2(Selenium Automation)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Seleniumtesting -->
@@ -127,15 +137,23 @@
           <div class="suite-Seleniumtesting-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testNGScripts.CrossBrowserTest</span>
+              <span class="class-name">testNGScripts.ParameterDemo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="method2(Selenium Automation)">
-                  </a> <!-- method2(Selenium Automation) -->
-                  <span class="method-name">method2</span>
-                  <span class="parameters">(Selenium Automation)</span>
+                  <a name="login(employee, emp@123)">
+                  </a> <!-- login(employee, emp@123) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(employee, emp@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(admin, admin@123)">
+                  </a> <!-- login(admin, admin@123) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(admin, admin@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -146,32 +164,42 @@
                   <span class="parameters">(Jmeter Automation)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="method2(Selenium Automation)">
+                  </a> <!-- method2(Selenium Automation) -->
+                  <span class="method-name">method2</span>
+                  <span class="parameters">(Selenium Automation)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Seleniumtesting-class-passed -->
         </div> <!-- panel Seleniumtesting -->
         <div panel-name="test-xml-Seleniumtesting" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\sonal\eclipse-workspace\Phase5-Selenium-Apr\src\main\resources\CrossBrowser.xml</span>
+            <span class="header-content">C:\Users\sonal\eclipse-workspace\Phase5-Selenium-Apr\src\main\resources\ParameterDemo.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Seleniumtesting&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;ChromeBrowserTest&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
     &lt;parameter name=&quot;searchInput&quot; value=&quot;Selenium Automation&quot;/&gt;
-    &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;admin&quot;/&gt;
+    &lt;parameter name=&quot;Password&quot; value=&quot;admin@123&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNGScripts.CrossBrowserTest&quot;/&gt;
+      &lt;class name=&quot;testNGScripts.ParameterDemo&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ChromeBrowserTest --&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;FirefoxBrowsertest&quot;&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
     &lt;parameter name=&quot;searchInput&quot; value=&quot;Jmeter Automation&quot;/&gt;
-    &lt;parameter name=&quot;browserName&quot; value=&quot;Firefox&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;employee&quot;/&gt;
+    &lt;parameter name=&quot;Password&quot; value=&quot;emp@123&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testNGScripts.CrossBrowserTest&quot;/&gt;
+      &lt;class name=&quot;testNGScripts.ParameterDemo&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- FirefoxBrowsertest --&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
 &lt;/suite&gt; &lt;!-- Seleniumtesting --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,10 +211,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ChromeBrowserTest (1 class)</span>
+                <span class="test-name">Test1 (1 class)</span>
               </li>
               <li>
-                <span class="test-name">FirefoxBrowsertest (1 class)</span>
+                <span class="test-name">Test2 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,20 +240,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'method2')
-data.setCell(0, 2, 'testNGScripts.CrossBrowserTest')
-data.setCell(0, 3, 6112);
+data.setCell(0, 2, 'testNGScripts.ParameterDemo')
+data.setCell(0, 3, 6839);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'method2')
-data.setCell(1, 2, 'testNGScripts.CrossBrowserTest')
-data.setCell(1, 3, 5723);
+data.setCell(1, 2, 'testNGScripts.ParameterDemo')
+data.setCell(1, 3, 6169);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'login')
+data.setCell(2, 2, 'testNGScripts.ParameterDemo')
+data.setCell(2, 3, 1519);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'login')
+data.setCell(3, 2, 'testNGScripts.ParameterDemo')
+data.setCell(3, 3, 1515);
 window.suiteTableData['Seleniumtesting']= { tableData: data, tableDiv: 'times-div-Seleniumtesting'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Seleniumtesting">
               </div> <!-- times-div-Seleniumtesting -->
             </div> <!-- times-div -->
@@ -251,30 +287,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testNGScripts.CrossBrowserTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testNGScripts.ParameterDemo</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">openBrowser(chrome)</span>
+                <span class="method-name">startBrowser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
-                <span class="method-name">openBrowser(Firefox)</span>
-                <span class="method-start">8 ms</span>
+                <span class="method-name">startBrowser</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">method2(Selenium Automation)</span>
-                <span class="method-start">4232 ms</span>
+                <span class="method-name">login(admin, admin@123)</span>
+                <span class="method-start">10179 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">closebrowser</span>
-                <span class="method-start">9961 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">login(employee, emp@123)</span>
+                <span class="method-start">10563 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">method2(Selenium Automation)</span>
+                <span class="method-start">11702 ms</span>
+              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">method2(Jmeter Automation)</span>
-                <span class="method-start">11460 ms</span>
+                <span class="method-start">12086 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closebrowser</span>
-                <span class="method-start">17575 ms</span>
+                <span class="method-start">17881 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class after">
+                <span class="method-name">closebrowser</span>
+                <span class="method-start">18927 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

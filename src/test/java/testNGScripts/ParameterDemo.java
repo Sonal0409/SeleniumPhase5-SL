@@ -1,10 +1,16 @@
 package testNGScripts;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -12,21 +18,13 @@ import org.testng.annotations.Test;
 
 public class ParameterDemo {
 	
-	
-WebDriver driver;
+	WebDriver driver;
 	
 	@BeforeClass
-	public void openBrowser()
+	public void startBrowser() throws MalformedURLException
 	{
-        driver = new ChromeDriver();
-		
-		driver.manage().window().maximize();
-		
-		driver.manage().deleteAllCookies();
-		
-		driver.manage().timeouts().pageLoadTimeout(3, TimeUnit.SECONDS);
-		
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+		driver = new ChromeDriver();
 		
         driver.get("https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Special%3ASearch&returntoquery=search%3D%26go%3DGo");
 		

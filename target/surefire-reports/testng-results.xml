@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="8" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-15T07:11:28Z" name="Seleniumtesting" finished-at="2022-04-15T07:12:05Z" duration-ms="37042">
+    <groups>
+    </groups>
+    <test started-at="2022-04-15T07:11:28Z" name="Test1" finished-at="2022-04-15T07:11:47Z" duration-ms="19098">
+      <class name="testNGScripts.LinktextLocatorDemo">
+        <test-method signature="linkTextDemo()[pri:0, instance:testNGScripts.LinktextLocatorDemo@38145825]" started-at="2022-04-15T07:11:28Z" name="linkTextDemo" finished-at="2022-04-15T07:11:47Z" duration-ms="19018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- linkTextDemo -->
+      </class> <!-- testNGScripts.LinktextLocatorDemo -->
+    </test> <!-- Test1 -->
+    <test started-at="2022-04-15T07:11:47Z" name="Test2" finished-at="2022-04-15T07:12:05Z" duration-ms="17751">
+      <class name="testNGScripts.TestAnnotation1">
+        <test-method is-config="true" signature="startbrowser()[pri:0, instance:testNGScripts.TestAnnotation1@41f69e84]" started-at="2022-04-15T07:11:47Z" name="startbrowser" finished-at="2022-04-15T07:11:54Z" duration-ms="6811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startbrowser -->
+        <test-method signature="testcase1()[pri:49, instance:testNGScripts.TestAnnotation1@41f69e84]" started-at="2022-04-15T07:11:54Z" name="testcase1" finished-at="2022-04-15T07:12:00Z" duration-ms="5778" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase1 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testNGScripts.TestAnnotation1@41f69e84]" started-at="2022-04-15T07:12:00Z" name="closeBrowser" finished-at="2022-04-15T07:12:05Z" duration-ms="5160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testNGScripts.TestAnnotation1 -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Seleniumtesting -->
+  <suite started-at="2022-04-15T07:12:05Z" name="Seleniumtesting (0)" finished-at="2022-04-15T07:12:05Z" duration-ms="3">
+    <groups>
+      <group name="IntegrationTest">
+        <method signature="TesNgGroupsDemo.testcase3()[pri:49, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" name="testcase3" class="testNGScripts.TesNgGroupsDemo"/>
+        <method signature="TesNgGroupsDemo.testcase4()[pri:50, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" name="testcase4" class="testNGScripts.TesNgGroupsDemo"/>
+      </group> <!-- IntegrationTest -->
+      <group name="RegressionTest">
+        <method signature="TesNgGroupsDemo.testcase5()[pri:49, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" name="testcase5" class="testNGScripts.TesNgGroupsDemo"/>
+        <method signature="TesNgGroupsDemo.testcase6()[pri:50, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" name="testcase6" class="testNGScripts.TesNgGroupsDemo"/>
+      </group> <!-- RegressionTest -->
+    </groups>
+    <test started-at="2022-04-15T07:12:05Z" name="Test1" finished-at="2022-04-15T07:12:05Z" duration-ms="3">
+      <class name="testNGScripts.TesNgGroupsDemo">
+        <test-method signature="testcase5()[pri:49, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" started-at="2022-04-15T07:12:05Z" name="testcase5" finished-at="2022-04-15T07:12:05Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase5 -->
+        <test-method signature="testcase3()[pri:49, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" started-at="2022-04-15T07:12:05Z" name="testcase3" finished-at="2022-04-15T07:12:05Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase3 -->
+        <test-method signature="testcase6()[pri:50, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" started-at="2022-04-15T07:12:05Z" name="testcase6" finished-at="2022-04-15T07:12:05Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase6 -->
+        <test-method signature="testcase4()[pri:50, instance:testNGScripts.TesNgGroupsDemo@5038d0b5]" started-at="2022-04-15T07:12:05Z" name="testcase4" finished-at="2022-04-15T07:12:05Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase4 -->
+      </class> <!-- testNGScripts.TesNgGroupsDemo -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Seleniumtesting (0) -->
+</testng-results>
